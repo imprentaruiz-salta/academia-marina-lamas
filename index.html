@@ -36,6 +36,12 @@
           <button class="audio-button play" id="play-audio" type="button" aria-label="Reproducir audio">▶ Escuchar</button>
           <button class="audio-button stop" id="stop-audio" type="button" aria-label="Detener audio">■ Detener</button>
         </div>
+        <nav class="audio-links" aria-label="Enlaces del audio">
+          <a href="marina-muestra.mp3" target="_blank" rel="noopener">Link directo al audio</a>
+          <a href="marina-muestra.mp3" download="marina-lamas.mp3">Descargar MP3</a>
+          <a href="marina-muestra.wav" download="marina-lamas.wav">Descargar WAV</a>
+        </nav>
+      </section>
       </section>
     </section>
   </main>
@@ -73,6 +79,9 @@
     .audio-button:hover{filter:brightness(.95);transform:translateY(-1px)}
     .audio-button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
     .play{background:var(--wine);color:#fff}.stop{background:#eee7e3;color:var(--ink)}
+    .audio-links{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 18px;margin-top:16px;font:600 .88rem Arial,sans-serif}
+    .audio-links a{color:var(--wine);text-decoration:underline;text-underline-offset:3px}
+    .audio-links a:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:2px}
     @media(max-width:420px){.identity{padding:20px 4px}.logo{margin-bottom:18px}.eyebrow{letter-spacing:.27em}}
   </style>
 </body>
