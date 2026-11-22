@@ -34,6 +34,7 @@
         </audio>
         <div class="audio-buttons">
           <button class="audio-button play" id="play-audio" type="button" aria-label="Reproducir audio">▶ Escuchar</button>
+          <button class="audio-button pause" id="pause-audio" type="button" aria-label="Pausar audio">Ⅱ Pausar</button>
           <button class="audio-button stop" id="stop-audio" type="button" aria-label="Detener audio">■ Detener</button>
         </div>
         <nav class="audio-links" aria-label="Enlaces del audio">
@@ -50,6 +51,9 @@
       const audio = document.getElementById('marina-audio');
       document.getElementById('play-audio').addEventListener('click', function () {
         audio.play();
+      });
+      document.getElementById('pause-audio').addEventListener('click', function () {
+        audio.pause();
       });
       document.getElementById('stop-audio').addEventListener('click', function () {
         audio.pause();
@@ -78,7 +82,7 @@
     .audio-button{min-width:132px;border:0;border-radius:999px;padding:12px 16px;font:600 .95rem Arial,sans-serif;cursor:pointer;transition:transform .15s ease,filter .15s ease}
     .audio-button:hover{filter:brightness(.95);transform:translateY(-1px)}
     .audio-button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
-    .play{background:var(--wine);color:#fff}.stop{background:#eee7e3;color:var(--ink)}
+    .play{background:var(--wine);color:#fff}.pause{background:#d8c9ac;color:#332b2b}.stop{background:#eee7e3;color:var(--ink)}
     .audio-links{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 18px;margin-top:16px;font:600 .88rem Arial,sans-serif}
     .audio-links a{color:var(--wine);text-decoration:underline;text-underline-offset:3px}
     .audio-links a:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:2px}
